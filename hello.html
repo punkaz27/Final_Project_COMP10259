@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ContactUsAsssign.html">
+    <!-- <link rel="stylesheet" href="styles/sample.scss"> -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/scss.css">
+    <title>Species Website</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        #movableHeader{
+            font-size: larger;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: rgb(236, 9, 9);
+            overflow: hidden;
+            white-space: nowrap;
+            text-align: center;
+            
+            animation:slide 5s ;
+            animation-direction: alternate-reverse;
+            animation-iteration-count: infinite;
+         
+        }
+        @keyframes slide{
+            from{
+                margin-left: 70%;
+            }
+
+            to{
+                margin-left: -70%;
+            }
+        }
+        </style>
+
+</head>
+<body>
+    <header>
+        <h1>Species Website</h1>
+    </header>
+    <nav id="navbar">
+        <ul>
+            <li class="nav" id="AboutNav" ><a href="#about">About</a></li>
+            <li class="nav" id="GalleryNav"><a href="#gallery">Gallery</a></li>
+            <li class="nav" id="World-countNav"><a href="#world-count">World Count</a></li>
+            <li class="nav" id="ContactNav"><a href="ContactUsAsssign.html">Contact Us</a></li>
+        </ul>
+    </nav>
+   <!-- <nav>
+        <ul> -->
+            <div class="fixed-header" id="movableHeader">
+                Welcome to the website  
+            </div>  
+        </ul>
+   </nav>
+    <main>
+        <section id="about">
+            <h1>About the Species</h1>
+            <p>Catfish are a bottom feeding fish primarily found in rivers, but also lakes. They have a dark Red/Brown top with a lighter underbelly. Catfish have a flat head along with their trademark cat-like whiskers.This species can reach up to 50 pounds in size. Often referred to as a fish of 10,000 casts, they are aggressive and have a mouthful of teeth! Ontario is lucky enough to have three of the Top 10 Muskie fishing spots in the world. This includes Lake St. Clair, Georgian Bay, and the St. Lawrence River with special mention to the Niagara River which is on the rebound.</p><br>
+        <p> Habitat: Redhead Catfish favor motionless or slowly moving waters, such as deep ponds, oxbow lakes, and calm rivers. In places with muddy or sandy bottoms where they can easily search for food, they are frequently encountered.</p>
+        <br>
+            <h1>Habits:</h1>
+            <p>Since they are largely nocturnal, these catfish are more active at night and in the evening. They are opportunistic eaters and get most of their nutrition from small aquatic insects, crustaceans, and plant materials. They can find food even in low light or murky waters thanks to the very sensitive barbels around their mouths.
+            Redhead Although catfish typically live alone, they occasionally gather in small groups, particularly during the breeding season. The males protect the nests while the ladies lay their eggs in foliage that is submerged during breeding.<p>
+            </p>
+        </section>
+        <section id="gallery">
+            <h1>Gallery</h1>
+            <div class="image-gallery">
+                <figure class="media">
+                    <img src="Hero.webp" alt="Image 1">
+                    <figcaption>source:internet.</figcaption>
+                </figure>
+                <figure class="media">
+                    <img src="images.jpg"alt="Image 1">
+                    <figcaption>source:internet.</figcaption>
+                </figure>
+                <figure class="media" >
+                    <img src="img1.jpg" alt="Image 1">
+                    <figcaption>source:internet.</figcaption>
+                </figure>
+                <figure class="media">
+                    <img src="redhead.webp" alt="Image 1">
+                    <figcaption>source:internet.</figcaption>
+                </figure>
+                <figure class="media" >
+                    <img src="redheadfish.jpg" alt="Image 1">
+                    <figcaption>source:internet.</figcaption>
+                </figure>
+                <!-- Adding images here -->
+            </div>
+            <div class="video-gallery">
+                <figure class="media">
+                    <video controls>
+                        <source src="Facts about Redfish - Fish Facts.mp4" type="video/mp4">
+                    </video>
+                </figure>
+                <figure class="media">
+                    <video controls>
+                        <source src="Catfish.mp4" type="video/mp4">
+                    </video>
+                    <figcaption>Video by: Nischal Pant.</figcaption>
+                </figure>
+                <!-- Adding  videos here -->
+            </div>
+        </section>
+        <section id="world-count">
+            <h1>World Count</h1>
+            <table>
+                <tr>
+                    <th>Statistic</th>
+                    <th>Value</th>
+                </tr>
+                <tr>
+                    <td>Population Size</td>
+                    <td>1000</td>
+                </tr>
+                <tr>
+                    <td>length</td>
+                    <br>
+                    <td>45 cm to 60 cm</td>
+                    <br>
+                <tr>
+                <tr>
+                    <td>lifespan</td>
+                    <td>10 to 15 years</td>
+                </tr>
+                <tr>
+                    <td>Range</td>
+                    <td>Centred in the Colorado River</td> 
+                </tr>
+                <tr>
+                    <td>Reproduction</td>
+                    <td>5months </td>
+                </tr>
+            </table>
+        </section>
+    </main>
+        <script>
+            const aboutnav = document.getElementById("AboutNav");
+            const gallerynav = document.getElementById("GalleryNav");
+            const world_countnav = document.getElementById("World-countNav");
+            aboutnav.addEventListener('click',function (){
+            document.getElementById("about").style.display="Block";
+            document.getElementById("gallery").style.display="None";
+            document.getElementById("world-count").style.display="None";
+                    });
+            gallerynav.addEventListener('click',function (){
+                document.getElementById("gallery").style.display="Block";
+                document.getElementById("about").style.display="None";
+                document.getElementById("world-count").style.display="None";
+            });
+            world_countnav.addEventListener('click',function (){
+                document.getElementById("world-count").style.display="Block";
+                document.getElementById("gallery").style.display="None";
+                document.getElementById("about").style.display="None";
+            });
+        </script><script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) {
+            $('.navbar').addClass('fixed');
+        } else {
+            $('.navbar').removeClass('fixed');
+        }
+    });
+});
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 110) {
+            $('#navbar').addClass('fixed');
+        } else {
+            $('#navbar').removeClass('fixed');
+        }
+    });
+});
+</script>
+<script>
+$(document).ready(function() {
+    // Set Basic variables
+    var slides = $('.media');
+    var slideIndex = 0;
+    
+    // Show the first slide
+    $(slides[slideIndex]).show();
+    
+    // Set interval to change slides
+    setInterval(function() {
+      // Hide the current slide
+      $(slides[slideIndex]).fadeOut();
+      
+      // Increment index or reset to 0
+     slideIndex = (slideIndex + 1) % slides.length;
+
+     console.log(slideIndex);
+
+      
+      // Show the next slide
+      $(slides[slideIndex]).delay(450).fadeIn();
+    }, 4000); 
+  });
+    </script>
+    <script>
+      $(document).mouseup(function(e) 
+{
+    var container = $("#gallery");
+    var navbar = $("#navbar");
+    var gallery =!container.is(e.target) && container.has(e.target).length === 0;
+    var nav =!navbar.is(e.target) && navbar.has(e.target).length === 0;
+// alert(nav)
+    // if the target of the click isn't the container nor a descendant of the container
+    if (gallery && nav) 
+    {
+        // alert("hi")
+        $(".media").show();
+    }
+});
+    </script>
+    </main>
+</body>

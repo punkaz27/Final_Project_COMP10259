@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Stylescontact.css">
+  <link rel="stylesheet" href="styles/scss.css">
+  
+  <title>Contact Us</title>
+  <script>
+    const contactForm = document.getElementById('contactForm');
+    
+
+contactForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  if (validateForm()) {
+    // Form submission logic (You can implement sending an email here)
+    alert('Form submitted successfully!');
+    contactForm.reset();
+  }
+});
+
+function validateForm() {
+  const firstName = document.getElementById('firstName').value.trim();
+  const lastName = document.getElementById('lastName').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const date = document.getElementById('date').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const message = document.getElementById('message').value.trim();
+
+
+  if (!nameRegex.test(firstName)) {
+    alert('First name should be at least 5 characters.');
+    return false;
+  }
+
+  if (!nameRegex.test(lastName)) {
+    alert('Last name should be at least 5 characters.');
+    return false;
+  }
+
+  if (!emailRegex.test(email)) {
+    alert('Please enter a valid email.');
+    return false;
+  }
+
+  if (!dateRegex.test(date)) {
+    alert('Date must have the format dd/mm/yy.');
+    return false;
+  }
+
+  if (!phoneRegex.test(phone)) {
+    alert('Phone must contain 10 digits.');
+    return false;
+  }
+
+  if (!messageRegex.test(message)) {
+    alert('Message must be at least 50 alphabets.');
+    return false;
+  }
+
+  return true;
+}
+
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Contact Us</h1>
+  </header>
+
+  <main>
+    <form id="contactForm"action="https://formspree.io/f/xoqoeqja" method="POST" >>
+      
+      <div>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+      </div>
+      <div>
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div>
+        <label for="date">Date:</label>
+        <input type="text" id="date" name="date" placeholder="dd/mm/yy" required>
+      </div>
+      <div>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+
+  
+</body>
+</html>
